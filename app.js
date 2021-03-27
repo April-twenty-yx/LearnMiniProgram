@@ -1,0 +1,2 @@
+// App -> page -> component
+App({})
