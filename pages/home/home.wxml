@@ -1,2 +1,3 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
+<text>测试tag2</text>
