@@ -1,66 +1,55 @@
 // pages/home/home.js
+const app = getApp();
+console.log(app.globalData.name);
+console.log(app.globalData.family);
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    name: app.globalData.name,
+    family: app.globalData.family,
+    list: []
+  },
+  handleUserInfo (e) {
+    console.log(e);
+  },
+  // 页面被加载出来
+  onLoad () {
+    console.log("onLoad");
+    wx.request({
+      url: 'http://152.136.185.210:8000/api/w6/recommend',
+      success: (res) => {
+        console.log(res);
+        this.setData({
+          list: res.data.data.list
+        })
+      }
+    })
+  },
+  // 界面显示出来
+  onShow () {
+    console.log("onShow");
+  },
+  // 界面初次渲染
+  onReady () {
+    console.log("onReady");
+  },
+  // 界面被隐藏
+  onHide () {
+    console.log("onHide");
+  },
+  // 界面被卸载（销毁）
+  onUnload () {
+    console.log("onUnload");
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  // 监听其他函数
+  onPullDownRefresh () {
+    console.log("下拉刷新触发");
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onPageScroll (obj) {
+    console.log(obj);
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onReachBottom () {
+    console.log("到底了");
   }
 })

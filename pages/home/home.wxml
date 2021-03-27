@@ -1,2 +1,17 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
+<!-- 如何获取用户信息，即实现用户授权 -->
+<!-- 利用button中的open-type和bindgetuserinfo -->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handleUserInfo">获取用户授权</button>
+
+<!-- 利用open-data可以展示用户信息 -->
+<open-data type="userNickName"></open-data>
+
+<view>
+  {{ name }}
+</view>
+<view>
+  {{ family }}
+</view>
+
+<view wx:for="{{ list }}">{{ item.title }}</view>
