@@ -1,2 +1,12 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
+<!-- 1. 数据绑定 -->
+<view>{{ name }}</view>
+<view>{{ age }}</view>
+<!-- 2. 列表渲染 -->
+<view wx:for="{{ students }}">{{ item.name }} - {{ item.age }}</view>
+<!-- 3. 事件监听 -->
+<view>计数器值：{{ counter }}</view>
+<button size="mini" bindtap="handleAdd">+</button>
+<button size="mini" bindtap="handleSub">-</button>
+<!-- 编程范式 => 1. 命令式编程（操作原生DOM，程序按语句一步一步执行）
+2. 声明式编程 Vue/React -->
