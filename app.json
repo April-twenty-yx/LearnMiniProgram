@@ -2,5 +2,8 @@
   "pages": [
     "pages/home/home",
     "pages/about/about"
-  ]
+  ],
+  "useExtendedLib": {
+    "weui": true
+  }
 }
