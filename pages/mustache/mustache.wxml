@@ -1,0 +1,16 @@
+<!--pages/mustache/mustache.wxml-->
+<include src="/wxml/head.wxml"/>
+<view>{{firstName}} {{lastName}}</view>
+<view>{{firstName + " " + lastName}}</view>
+<view>{{ age >= 18 ? "成年人" : "未成年人" }}</view>
+<view>{{ time }}</view>
+<button size="mini" bindtap="handleChange">点击我切换颜色</button>
+<view class="{{ isActive ? 'active' : '' }}">哈哈</view>
+
+<view>-------------</view>
+<!-- import只能引入template，而且在一个template中不能引入另外一个template -->
+<import src="/wxml/template.wxml" />
+<template is="test_template" data="{{ name: '王花花', age: 12 }}" />
+
+<!-- include 不用用来导入template和wxs,但是可以嵌套导入 -->
+<include src="/wxml/footer.wxml"/>

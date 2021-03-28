@@ -1,0 +1,4 @@
+var name = '李栓蛋';
+module.exports = {
+  name: name
+}

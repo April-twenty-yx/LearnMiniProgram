@@ -1,0 +1,7 @@
+function priceFormat (price, num) {
+  num = num || 2;
+  return parseFloat(price).toFixed(num);
+}
+module.exports = {
+  priceFormat: priceFormat
+}

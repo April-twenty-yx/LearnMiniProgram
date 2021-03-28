@@ -1,0 +1,32 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- 1.在wxml中直接使用wxs  -->
+<wxs module="info">
+  // wxs中只能书写es5语法，不能用es6语法
+  var name = "王花花";
+  var age = 31;
+  var sum = function (num1, num2) {
+    return num1 + num2;
+  }
+
+  module.exports = {
+    name: name,
+    age: age,
+    sum: sum
+  }
+</wxs>
+
+<!-- 如何获取wxs中的数据？
+1.给wxs一个module名称
+2.导出wxs中的相关东西
+3.使用 -->
+<view>{{ info.name }}</view>
+<view>{{ info.age }}</view>
+<view>{{ info.sum(20, 40) }}</view>
+
+<!-- 2.从外部引入wxs文件 -->
+<wxs src="../../wxs/test.wxs" module="test"/>
+<view>{{ test.name }}</view>
+
+<!-- wxs相当于vue中的filter -->
+<wxs src="/wxs/format.wxs" module="format"/>
+<view>{{ format.priceFormat(num, 3) }}</view>
