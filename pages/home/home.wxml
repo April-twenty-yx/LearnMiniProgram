@@ -1,2 +1,28 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
+<button size="mini" type="primary" bindtouchstart="handleTouchStart" bindtouchmove="handleTouchMove" bindtouchend="handleTouchEnd"  bindtap="handleTap" bindlongpress="handleLongPress">点我</button>
+
+<view>
+  <button size="mini" bind:touchstart="handleStart" bind:touchend="handleEnd" plain>点我</button>
+</view>
+
+<view id="father" bind:tap="handleFather">
+  <view id="son" bind:tap="handleSon"></view>
+</view>
+
+<!-- 函数传递参数只能用data-xx传递 -->
+<!-- 反正挺麻烦的 -->
+<view class="container">
+  <block wx:for="{{ list }}" wx:key="{{index}}">
+    <view class="item" bindtap="handleClick" data-index="{{ index }}" data-item="{{ item }}">{{ item }}</view>
+  </block>
+</view>
+<!-- 事件捕获和事件冒泡 -->
+<!-- 顺序：先一层层向里面捕获，再向外一层层冒泡 -->
+<!-- bind 事件一层层传递 -->
+<!-- catch 阻止事件的传递 -->
+<view class="view1" capture-bind:tap="handleCaputure1" bind:tap="handleTap1">
+  <view class="view2" capture-catch:tap="handleCaputure2" bind:tap="handleTap2">
+    <view class="view3" capture-bind:tap="handleCaputure3" bind:tap="handleTap3"></view>
+  </view>
+</view>

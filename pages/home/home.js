@@ -1,66 +1,58 @@
 // pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    list: ["衣服", "裤子", "鞋子"]
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handleTouchStart () {
+    console.log('start');
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  handleTouchMove () {
+    console.log('move');
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  handleTouchEnd () {
+    console.log('leave');
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleTap () {
+    console.log('click');
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  handleLongPress () {
+    console.log('loading..');
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handleEnd (e) {
+    console.log(e);
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleStart (e) {
+    console.log(e);
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleFather (e) {
+    console.log(e);
+  },
+  handleSon (e) {
+    // target 产生事件的 view
+    // currentTarget 触发事件的 view
+    // 当我点击son，产生了son事件，同时也触发了father事件
+    console.log(e);
+  },
+  handleClick (e) {
+    // console.log(e);
+    console.log(e.currentTarget.dataset.index + '-' + e.currentTarget.dataset.item);
+  },
+  handleCaputure1 () {
+    console.log('capture1');
+  },
+  handleTap1 () {
+    console.log('tap1');
+  },
+  handleCaputure2 () {
+    console.log('capture2');
+  },
+  handleTap2 () {
+    console.log('tap2');
+  },
+  handleCaputure3 () {
+    console.log('capture3');
+  },
+  handleTap3 () {
+    console.log('tap3');
   }
 })
