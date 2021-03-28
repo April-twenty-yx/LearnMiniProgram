@@ -1,2 +1,1 @@
-// App -> page -> component
 App({})

@@ -1,0 +1,18 @@
+<!--pages/button/button.wxml-->
+<button>按钮</button>
+<!-- button 是一个块级元素 -->
+
+<!-- size -->
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+<!-- 加了mini值的button是一个行内块元素 -->
+
+<button disabled size="mini">按钮</button>
+
+<button size="mini" loading>按钮</button>
+
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+
+<button size="mini" hover-class="pressed">按钮</button>

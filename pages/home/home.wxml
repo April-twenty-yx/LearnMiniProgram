@@ -1,2 +1,14 @@
 <!--pages/home/home.wxml-->
-<text class="title">Hello World</text>
+<text>我是text\n</text>
+<text>使用“\\n”进行换行\n</text>
+
+<text selectable>这段文字可以被选中\n</text>
+<text selectable="{{ true }}">这段文字也可以被选中\n</text>
+
+<text>Hello World\n</text>
+<text space="nbsp">Hello World\n</text>
+<text space="ensp">Hello World\n</text>
+<text space="emsp">Hello World\n</text>
+
+<text>a &nbsp; b\n</text>
+<text decode>a &nbsp; b\n</text>

@@ -1,0 +1,10 @@
+<!--pages/input/input.wxml-->
+<input />
+
+<input value="aa" />
+
+<input type="number" />
+
+<input password />
+
+<input placeholder="输入内容" bindinput="handleInput" bindfocus="handleFocus" bindblur="handleBlur"/>

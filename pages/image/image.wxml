@@ -1,0 +1,16 @@
+<!--pages/image/image.wxml-->
+<button bindtap="handleUpload" size="mini" type="primary">点击上传</button>
+<button open-type="getUserInfo" bindgetuserinfo="handleGet" size="mini" type="defaults">授权</button>
+<image src="{{imageUrl}}"/>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"/>
+<!-- 图片默认宽高 320x240 -->
+<!-- 图片是行内块元素，inline-block -->
+
+<!-- 绝对路径 -->
+<image src="/assets/tabbar/home.png"></image>
+<image src="../../assets/tabbar/category.png"/>
+
+<!-- bindload -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" bindload="handleLoad"/>
+
+<image wx:for="{{10}}" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" bindload="handleLoad" lazy-load show-menu-by-longpress/>

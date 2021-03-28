@@ -1,0 +1,13 @@
+<!--pages/view/view.wxml-->
+<view>
+  啊哈哈
+</view>
+<!-- view是一个块级组件 -->
+
+<view class="view-one" hover-class="active" hover-stay-time="{{ 2000 }}">点我</view>
+<!-- 松开手2ms后恢复原始状态 -->
+
+<view class="father" hover-class="father-active">
+  <view class="view-one" hover-class="active" hover-stop-propagation>按我</view>
+</view>
+<!-- hover-stop-propagation阻止冒泡 -->

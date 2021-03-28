@@ -1,0 +1,23 @@
+/* pages/view/view.wxss */
+.view-one {
+  width: 100px;
+  height: 100px;
+  background: #ff5777;
+}
+
+.active {
+  background: #ff8524;
+  color: white;
+  font-size: 24px;
+}
+
+.father {
+  margin-top: 20px;
+  background: #42A5F5;
+  width: 200px;
+  height: 200px;
+}
+
+.father-active {
+  background: #8DD35F;
+}
