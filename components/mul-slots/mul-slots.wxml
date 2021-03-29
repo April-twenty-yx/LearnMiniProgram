@@ -1,0 +1,9 @@
+<!--components/mul-slots/mul-slots.wxml-->
+<view>--------</view>
+<view>我是开头</view>
+<view>
+  <slot name="one"></slot>
+  <slot name="two"></slot>
+  <slot name="three"></slot>
+</view>
+<view>我是结尾</view>

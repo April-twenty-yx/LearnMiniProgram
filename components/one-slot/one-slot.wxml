@@ -1,0 +1,4 @@
+<!--components/one-slot/one-slot.wxml-->
+<view>我是标题</view>
+<slot></slot>
+<view>我是结尾</view>

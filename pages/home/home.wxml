@@ -1,2 +1,31 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
+<!-- 使用组件有两个步骤
+1.注册组件
+2.使用 -->
+<my-cpn></my-cpn>
+<my-cpn />
+<view>----------------------</view>
+<my-style />
+<my-prop></my-prop>
+<my-prop title="父组件给的标题"/>
+<cpn-style titleclass="active"></cpn-style>
+<view>counter: {{ counter }}</view>
+<cpn-event bind:increment="handleInc"/>
+<view>-------------------------</view>
+<w-tab-control list="{{[ '衣服', '裤子', '鞋子' ]}}" bind:show="handleShow"/>
+<my-sel id="son"></my-sel>
+<button size="mini" bindtap="handleCpnAdd">+1</button>
+<one-slot>
+  <button size="mini">11</button>
+</one-slot>
+<one-slot></one-slot>
+<view>-------------------------</view>
+<button size="mini" type="primary" bindtap="handleHidden">显示/隐藏</button>
+<block wx:if="{{ show }}">
+  <mul-slots>
+    <view slot="one">one</view>
+    <view slot="two">two</view>
+    <view slot="three">three</view>
+  </mul-slots>
+</block>
