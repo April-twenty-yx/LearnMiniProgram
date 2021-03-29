@@ -1,2 +1,9 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
+<view>
+  <button size="mini" bindtap="handleShowToast">showToast</button>
+  <button size="mini" bindtap="handleShowModel">showModel</button>
+  <button size="mini" bindtap="handleShowLoading">showLoading</button>
+  <button size="mini" bindtap="handleShowAction">showAction</button>
+  <button size="mini" open-type="share">分享</button>
+</view>
