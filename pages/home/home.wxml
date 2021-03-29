@@ -1,2 +1,13 @@
 <!--pages/home/home.wxml-->
 <text class="title">Hello World</text>
+<navigator url="/pages/detail/detail">跳到详情页</navigator>
+<navigator url="/pages/detail/detail" open-type="redirect">跳到详情页(redirect)</navigator>
+<navigator url="/pages/about/about" open-type="switchTab">跳到详情页(switchTab)</navigator>
+<navigator url="/pages/about/about" open-type="reLaunch">跳到详情页(reLaunch)</navigator>
+
+<!-- 跳转传递数据 -->
+<view>-----------------{{ title }}</view>
+<navigator url="/pages/detail/detail?name=王花花&age=2&height=1.33">跳转到detail</navigator>
+
+<!-- 通过代码实现页面跳转 -->
+<button bindtap="handleTap">点我跳转</button>
